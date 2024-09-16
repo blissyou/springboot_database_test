@@ -34,5 +34,8 @@ public class UserService {
     }
 
     //TODO -> 사용자 10명을 생성후 70점 이상의 사용자의 정보를 찾아주는 method 작성하기
+    public List<UserEntity> filterScore(int score){
+        return userRepository.findAllScoreGreaterThan(score);
+    }
 
 }
